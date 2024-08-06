@@ -14,21 +14,13 @@ export default {
   <main>
     <BreadCrumbs />
     <PageTitle />
-    <Filters />
-    <Table />
+    <div class="main-container"><Filters /> <Table /></div>
   </main>
   <footer></footer>
 </template>
 
-<style scoped>
-header {
-  height: 208px;
-  background-color: #f3f3f3;
-  width: 100%;
-}
-footer {
-  height: 345px;
-  background-color: #f3f3f3;
-  width: 100%;
+<style lang="scss">
+.main-container {
+  display: flex;
 }
 </style>

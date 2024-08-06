@@ -1,4 +1,4 @@
-@import "./variables.scss";
+@import "./_variables.scss";
 
 body {
   margin: 0;
@@ -12,8 +12,8 @@ body {
   line-height: 1.5;
   font-weight: 400;
 
-  color: #333;
-  background-color: #fafafa;
+  color: $font-color;
+  background-color: $font-color;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -45,11 +45,10 @@ button {
   transition: border-color 0.25s;
 }
 button:hover {
-  border-color: #ffc020;
+  background-color: #ffcf53;
 }
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+button:active {
+  background-color: #ecaa00;
 }
 
 .card {
@@ -60,4 +59,19 @@ button:focus-visible {
   max-width: 1440px;
   margin: 0 auto;
   text-align: center;
+  background-color: $bg-color;
+}
+
+header {
+  height: 208px;
+  background-color: #f3f3f3;
+  width: 100%;
+}
+footer {
+  height: 345px;
+  background-color: #f3f3f3;
+  width: 100%;
+}
+main {
+  margin: 32px 16px 40px;
 }

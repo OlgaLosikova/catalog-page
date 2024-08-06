@@ -1,7 +1,12 @@
 <script>
+import Search from "../Search.vue";
+import Checkbox from "./Checkbox.vue";
+
 export default {
+  components: { Search, Checkbox },
   data() {
     return {
+      isExpanded:true,
       filters: [
         {
           title: "Категории",
@@ -59,32 +64,55 @@ export default {
 
 <template>
   <aside class="filter">
-    <div v-for="filter in filters" :key="filter.title">
+    <div class="filter-container" v-for="filter in filters" :key="filter.title">
       <div class="filter__header">
         <h3>{{ filter.title }}</h3>
-        <img src="../../assets/svg/arrow-down.svg" alt="expand" /><img
+        <img v-if="!isExpanded" src="../../assets/svg/arrow-down.svg" alt="expand" /><img v-else
           src="../../assets/svg/arrow-up.svg"
           alt="collapse"
         />
       </div>
-
-      <p class="filter__item" v-for="item in filter.categories">{{ item }}</p>
+      <Search v-if="filter.title !== 'Категории' && filter.title !== 'Цена'" />
+      <p
+        v-if="filter.title === 'Категории'"
+        class="filter__item"
+        v-for="item in filter.categories"
+      >
+        {{ item }}
+      </p>
+      <Checkbox
+        v-else-if="
+          filter.title === 'Производитель'|| filter.title === 'Масштаб'
+        "
+        v-for="item in filter.categories"
+        :label="item"
+      />
     </div>
   </aside>
 </template>
 
 <style lang="scss">
+@import "../../assets/style/variables";
+
 .filter {
   text-align: start;
-  background-color: #fff;
+  background-color: $bg-color-white;
   border-radius: 16px;
   padding: 16px;
   width: 240px;
   &__header {
     display: flex;
+    justify-content: space-between;
   }
   &__item {
     margin-left: 8px;
+    margin-block-end: 6px;
+    margin-block-start: 6px;
+  }
+  &-container{
+    min-height: 264px;
+    display: flex;
+    flex-direction: column;
   }
 }
 </style>
