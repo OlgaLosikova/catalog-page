@@ -20,6 +20,7 @@
   border-radius: 9px;
   padding-left: 12px;
   font-size: 14px;
+ 
 
   &::placeholder {
     color: $font-color-light;
@@ -27,6 +28,7 @@
 
   &-container {
     position: relative;
+    margin-bottom: 8px;
   }
 
   &__image {
