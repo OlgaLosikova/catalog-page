@@ -1,6 +1,6 @@
 <script>
 import BreadCrumbs from "./components/BreadCrumbs.vue";
-import Table from "./components/Table.vue";
+import Table from "./components/Table/Table.vue";
 import PageTitle from "./components/PageTitle.vue";
 import Filters from "./components/Filters/Filters.vue";
 

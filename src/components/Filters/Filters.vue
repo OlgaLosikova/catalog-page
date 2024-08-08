@@ -1,5 +1,5 @@
 <script>
-import data from "../../assets/source/fliters.json"
+import filters from "../../assets/source/fliters.json"
 
 import Search from "../Search.vue";
 import Checkbox from "./components/Checkbox.vue";
@@ -11,7 +11,7 @@ export default {
   components: { Search, Checkbox, Slider, FilterHeader, FilterFooter },
   data() {
     return {
-      filters: data,
+      filters: filters,
     };
   },
 };

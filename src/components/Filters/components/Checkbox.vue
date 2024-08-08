@@ -3,7 +3,6 @@ export default {
   props: {
     label: {
       type: String,
-      required: true,
     },
   },
 };
@@ -12,8 +11,9 @@ export default {
 <template>
   <label class="checkbox">
     <input type="checkbox" class="checkbox__input" />
-    <span class="checkbox__custom"></span>{{ label }}<span class="checkbox__quantity">0</span>
-  </label> 
+    <span class="checkbox__custom"></span>{{ label
+    }}<span class="checkbox__quantity">0</span>
+  </label>
 </template>
 <style lang="scss">
 @import "../../../assets/style/variables";
@@ -41,7 +41,7 @@ export default {
     width: 16px;
     height: 16px;
     display: inline-block;
-    background-image: url(../../assets/svg/check.svg);
+    background-image: url(../../../assets/svg/check.svg);
     background-repeat: no-repeat;
     border-radius: 4px;
     position: absolute;
@@ -57,11 +57,10 @@ export default {
     background-color: $bg-color-active;
     border-color: $bg-color-active;
   }
-  &__quantity{
+  &__quantity {
     margin-left: 4px;
     color: $font-color-light;
     font-size: 12px;
-   
   }
 }
 </style>
