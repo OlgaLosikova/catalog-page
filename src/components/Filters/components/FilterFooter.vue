@@ -14,7 +14,7 @@ export default {
       <option value="160">160 товаров</option>
     </select>
     <button class="button-outline">Сбросить товары</button>
-    <button class="button-ghost">
+    <button class="button-ghost button-ghost__medium">
       Сохранить подборку<svg
         width="16"
         height="16"
@@ -75,19 +75,22 @@ select {
   }
 }
 .button-ghost {
-  display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  height: 36px;
   margin-top: 16px;
   margin-bottom: 16px;
-  background-color: transparent;
+  background-color: #ffffffcc;
+
+  &__medium {
+    height: 36px;
+      width: 100%;
+      display: flex;
+  }
   svg {
     margin-left: 12px;
   }
   &:hover {
-    background-color: transparent;
+    background-color: #ffffffcc;
     color: $bg-color-active;
     &:hover svg {
       path:last-of-type {

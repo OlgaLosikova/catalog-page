@@ -1,5 +1,5 @@
 <script>
-import filters from "../../assets/source/fliters.json"
+import filters from "../../assets/source/fliters.json";
 
 import Search from "../Search.vue";
 import Checkbox from "./components/Checkbox.vue";
@@ -49,7 +49,7 @@ export default {
         <Slider />
       </div>
     </div>
-   
+
     <FilterFooter />
   </aside>
 </template>
@@ -64,6 +64,7 @@ export default {
   padding: 0 16px;
   width: 240px;
   box-sizing: border-box;
+  height: fit-content;
 
   &__item {
     margin-left: 8px;
@@ -72,7 +73,6 @@ export default {
   }
 
   &-container {
-
     display: flex;
     flex-direction: column;
   }
@@ -85,11 +85,12 @@ export default {
 .slider {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  gap:12px;
 
   &-component {
     grid-column-start: 1;
     grid-column-end: 3;
-    margin-top: 15px;
+    margin-top: 3px;
   }
   &-container {
     display: flex;
@@ -115,6 +116,6 @@ export default {
 .label {
   font-size: 12px;
   color: $font-color-gray;
-  margin-bottom: 4px
+  margin-bottom: 4px;
 }
 </style>
