@@ -2,12 +2,39 @@
 export default {
   data() {
     return {
-      categories: ["Популярности", "Рейтингу", "Цене", "Скидке", "Обновлению"],
-      isSorted: {
-        type: String,
-        default: "",
-      },
+      categories: [
+        { name: "Популярности", type: "popularity" },
+        { name: "Рейтингу", type: "rating" },
+        { name: "Цене", type: "price" },
+        { name: "Скидке", type: "discount" },
+        { name: "Обновлению", type: "update" },
+      ],
+
+      direction: "",
+      intermediateType: "",
     };
+  },
+  methods: {
+    setSort(type) {
+      if (this.direction === "") {
+        this.intermediateType = type;
+
+        this.direction = "desc";
+        this.$store.commit("setSort", { type, direction: this.direction });
+      } else if (this.direction === "desc") {
+        this.intermediateType !== type
+          ? (this.direction = "desc")
+          : (this.direction = "asc");
+        this.intermediateType = type;
+        this.$store.commit("setSort", { type, direction: this.direction });
+      } else {
+        this.intermediateType !== type
+          ? (this.direction = "asc")
+          : (this.direction = "");
+        this.intermediateType = type;
+        this.$store.commit("setSort", { type: "id", direction: "asc" });
+      }
+    },
   },
 };
 </script>
@@ -15,10 +42,14 @@ export default {
 <template>
   <div class="sort">
     <p class="sort__title">Сортровать по:</p>
-    <button class="sort__button" v-for="category in categories">
-      {{ category }}
+    <button
+      @click="() => setSort(category.type)"
+      class="sort__button"
+      v-for="category in categories"
+    >
+      {{ category.name }}
       <svg
-        v-if="isSorted === 'asc'"
+        v-if="direction === 'asc'"
         width="24"
         height="24"
         viewBox="0 0 24 24"
@@ -33,7 +64,7 @@ export default {
         />
       </svg>
       <svg
-        v-if="isSorted === 'desc'"
+        v-if="direction === 'desc'"
         width="24"
         height="24"
         viewBox="0 0 24 24"

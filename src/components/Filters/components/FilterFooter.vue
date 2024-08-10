@@ -13,7 +13,7 @@ export default {
     <select>
       <option value="160">160 товаров</option>
     </select>
-    <button class="button-outline">Сбросить товары</button>
+    <button @click="$store.commit('resetFilter')" class="button-outline">Сбросить товары</button>
     <button class="button-ghost button-ghost__medium">
       Сохранить подборку<svg
         width="16"

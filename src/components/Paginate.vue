@@ -7,7 +7,7 @@ export default {
   },
   data() {
     return {
-      page: 1
+      page: 1,
     };
   },
   methods: {
@@ -20,10 +20,10 @@ export default {
 
 <template>
   <paginate
-  v-model="page"
+    v-model="page"
     :page-count="2"
     :page-range="3"
-       :margin-pages="2"
+    :margin-pages="2"
     :click-handler="clickCallback"
     :prev-text="'Предыдущая'"
     :next-text="'Следующая'"
@@ -35,7 +35,7 @@ export default {
 </template>
 
 <style lang="scss">
-@import '../assets/style/variables';
+@import "../assets/style/variables";
 
 .pagination {
   display: flex;
@@ -75,9 +75,9 @@ li:last-child {
   width: 16px;
   height: 16px;
 }
-.active{
-    background-color: $bg-color-active;
-    color: $bg-color-white;
-    border-radius: 7px;
+.active {
+  background-color: $bg-color-active;
+  color: $bg-color-white;
+  border-radius: 7px;
 }
 </style>

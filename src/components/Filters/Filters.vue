@@ -14,6 +14,13 @@ export default {
       filters: filters,
     };
   },
+  methods: {
+    selectCategory(item) {
+      this.$store.state.selectedCategory = item;
+      this.$store.commit("addFilter", item);
+      this.$store.commit("setFilters", item);
+    },
+  },
 };
 </script>
 
@@ -23,8 +30,13 @@ export default {
       <FilterHeader :title="filter.title" />
       <Search v-if="filter.title !== 'Категории' && filter.title !== 'Цена'" />
       <p
+        @click="() => selectCategory(item)"
         v-if="filter.title === 'Категории'"
-        class="filter__item"
+        :class="
+          $store.state.selectedCategory === item
+            ? 'filter__item  filter__item_active'
+            : 'filter__item'
+        "
         v-for="item in filter.categories"
         :key="item"
       >
@@ -40,11 +52,11 @@ export default {
       <div class="slider" v-else>
         <div
           class="slider-container"
-          v-for="item in filter.categories"
-          :key="item"
+          v-for="item in $store.state.price"
+          :key="item.label"
         >
-          <span class="label">{{ item }}</span
-          ><input type="text" />
+          <span class="label">{{ item.label }}</span
+          ><input type="number" v-model="item.price" />
         </div>
         <Slider />
       </div>
@@ -70,6 +82,11 @@ export default {
     margin-left: 8px;
     margin-block-end: 6px;
     margin-block-start: 6px;
+    cursor: pointer;
+
+    &_active {
+      color: $bg-color-active;
+    }
   }
 
   &-container {
@@ -85,7 +102,7 @@ export default {
 .slider {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap:12px;
+  gap: 12px;
 
   &-component {
     grid-column-start: 1;

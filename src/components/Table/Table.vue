@@ -1,6 +1,4 @@
 <script>
-import data from "../../assets/source/data.json";
-
 import Card from "../Filters/components/Card/Card.vue";
 import Paginate from "../Paginate.vue";
 import FilterButton from "./components/FilterButton.vue";
@@ -10,18 +8,13 @@ import Sort from "./components/Sort.vue";
 
 export default {
   components: { FilterButton, Sort, Card, Paginate },
-  data() {
-    return {
-      data: data,
-    };
-  },
 };
 </script>
 
 <template>
   <div class="table">
     <div class="table-header">
-      <FilterButton text="тест" />
+      <FilterButton v-for="item in $store.state.selectedFilters" :key="item" :text="item"/>
       <div class="sort-wrapper">
         <Sort />
         <div class="buttons-wrapper">
@@ -34,7 +27,7 @@ export default {
     </div>
     <div class="table__body">
       <Card
-        v-for="item in data"
+        v-for="item in $store.state.data"
         :imgUrl="item.imgUrl"
         :description="item.description"
         :price="item.price"

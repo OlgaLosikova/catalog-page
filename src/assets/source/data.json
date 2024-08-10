@@ -3,300 +3,330 @@
     "id": 1,
     "description": "Эргономичный Неодимовый Куртка",
     "price": 9897,
-    "discount": false,
+    "discount": 0,
     "popularity": 6101,
     "rating": 5,
-    "update": "Wed Jul 09 2025 20:56:23 GM",
-    "imgUrl": "image1.png"
+    "update": "9.07.2025",
+    "imgUrl": "image1.png",
+    "category": "Авиация"
   },
   {
     "id": 2,
     "description": "Лоснящийся Меховой Майка",
     "price": 9486,
-    "discount": false,
+    "discount": 0,
     "popularity": 3271,
     "rating": 5,
-    "update": "Wed Feb 05 2025 13:02:06 GM",
-    "imgUrl": "image2.png"
+    "update": "5.02.2025",
+    "imgUrl": "image2.png",
+    "category": "Автомобили и мотоциклы"
   },
   {
     "id": 3,
     "description": "Практичный Кожанный Носки",
     "price": 5097,
-    "discount": false,
+    "discount": 0,
     "popularity": 486,
     "rating": 5,
-    "update": "Mon Aug 04 2025 17:50:50 GM",
-    "imgUrl": "image3.png"
+    "update": "4.08.2024",
+    "imgUrl": "image3.png",
+    "category": "Аэрографы и компрессоры"
   },
   {
     "id": 4,
     "description": "Маленький Пластиковый Сабо",
     "price": 5416,
-    "discount": false,
+    "discount": 0,
     "popularity": 4238,
     "rating": 2,
-    "update": "Fri Nov 29 2024 03:47:58 GM",
-    "imgUrl": "image4.jpg"
+    "update": "29.11.2024",
+    "imgUrl": "image4.jpg",
+    "category": "Военная техника"
   },
   {
     "id": 5,
     "description": "Лоснящийся Бетонный Плащ",
     "price": 948,
-    "discount": false,
+    "discount": 0,
     "popularity": 1123,
     "rating": 2,
     "update": "",
-    "imgUrl": "image5.jpg"
+    "imgUrl": "image5.jpg",
+    "category": "Доработка моделей"
   },
   {
     "id": 6,
     "description": "Свободный Резиновый Ножницы",
     "price": 9573,
-    "discount": false,
+    "discount": 0,
     "popularity": 1321,
     "rating": 3,
-    "update": "Fri Feb 21 2025 15:35:28 GM",
-    "imgUrl": "image1.png"
+    "update": "21.02.2025",
+    "imgUrl": "image1.png",
+    "category": "Железная дорога"
   },
   {
     "id": 7,
     "description": "Фантастический Резиновый Стол",
     "price": 4750,
-    "discount": false,
+    "discount": 0,
     "popularity": 6730,
     "rating": 4,
-    "update": "Sat Jul 12 2025 14:36:58 GM",
-    "imgUrl": "image2.png"
+    "update": "12.07.2025",
+    "imgUrl": "image2.png",
+    "category": "Инструмент"
   },
   {
     "id": 8,
     "description": "Эргономичный Бетонный Куртка",
     "price": 3768,
-    "discount": false,
+    "discount": 0,
     "popularity": 7794,
     "rating": 3,
-    "update": "Fri Nov 08 2024 15:19:32 GM",
-    "imgUrl": "image3.png"
+    "update": "8.11.2024",
+    "imgUrl": "image3.png",
+    "category": "Клей"
   },
   {
     "id": 9,
     "description": "Великолепный Пластиковый Носки",
     "price": 4364,
-    "discount": false,
+    "discount": 0,
     "popularity": 344,
     "rating": 5,
-    "update": "Sun Sep 29 2024 21:22:42 GM",
-    "imgUrl": "image4.jpg"
+    "update": "29.12.2024",
+    "imgUrl": "image4.jpg",
+    "category": "Краска"
   },
   {
     "id": 10,
     "description": "Невероятный Стальной Автомобиль",
     "price": 6082,
-    "discount": false,
+    "discount": 0,
     "popularity": 9973,
     "rating": 2,
-    "update": "Mon Aug 04 2025 02:27:23 GM",
-    "imgUrl": "image5.jpg"
+    "update": "4.08.2025",
+    "imgUrl": "image5.jpg",
+    "category": "Литература"
   },
   {
     "id": 11,
     "description": "Маленький Хлопковый Майка",
     "price": 9995,
-    "discount": false,
+    "discount": 0,
     "popularity": 7414,
     "rating": 4,
     "update": "",
-    "imgUrl": "image1.png"
+    "imgUrl": "image1.png",
+    "category": "Миниатюра и диорама"
   },
   {
     "id": 12,
     "description": "Практичный Бетонный Автомобиль",
     "price": 132,
-    "discount": false,
+    "discount": 0,
     "popularity": 6086,
     "rating": 5,
     "update": "",
-    "imgUrl": "image2.png"
+    "imgUrl": "image2.png",
+    "category": "Модели для детей"
   },
   {
     "id": 13,
     "description": "Лоснящийся Неодимовый Свитер",
     "price": 3923,
-    "discount": false,
+    "discount": 0,
     "popularity": 5341,
     "rating": 4,
-    "update": "Sat May 24 2025 10:43:07 GM",
-    "imgUrl": "image3.png"
+    "update": "24.05.2023",
+    "imgUrl": "image3.png",
+    "category": "Модельная химия"
   },
   {
     "id": 14,
     "description": "Потрясающий Кожанный Портмоне",
     "price": 2097,
-    "discount": true,
+    "discount": 10,
     "popularity": 6115,
     "rating": 2,
-    "update": "Wed Aug 06 2025 21:28:05 GM",
-    "imgUrl": "image4.jpg"
+    "update": "6.08.2025",
+    "imgUrl": "image4.jpg",
+    "category": "Печатная продукция"
   },
   {
     "id": 15,
     "description": "Практичный Деревянный Портмоне",
     "price": 3597,
-    "discount": false,
+    "discount": 0,
     "popularity": 2046,
     "rating": 4,
-    "update": "Mon Dec 16 2024 01:29:05 GM",
-    "imgUrl": "image5.jpg"
+    "update": "16.12.2024",
+    "imgUrl": "image5.jpg",
+    "category": "Флот"
   },
   {
     "id": 16,
     "description": "Эргономичный Резиновый Ножницы",
     "price": 552,
-    "discount": true,
+    "discount": 15,
     "popularity": 7762,
     "rating": 3,
-    "update": "Sat May 03 2025 10:50:06 GM",
-    "imgUrl": "image1.png"
+    "update": "3.05.2025",
+    "imgUrl": "image1.png",
+    "category": "Футляры и подставки"
   },
   {
     "id": 17,
     "description": "Великолепный Натуральный Ножницы",
     "price": 7135,
-    "discount": true,
+    "discount": 5,
     "popularity": 8741,
     "rating": 2,
     "update": "",
-    "imgUrl": "image2.png"
+    "imgUrl": "image2.png",
+    "category": "Авиация"
   },
   {
     "id": 18,
     "description": "Великолепный Хлопковый Свитер",
     "price": 5785,
-    "discount": false,
+    "discount": 0,
     "popularity": 361,
     "rating": 4,
-    "update": "Fri Mar 07 2025 18:33:27 GM",
-    "imgUrl": "image3.png"
+    "update": "7.03.2025",
+    "imgUrl": "image3.png",
+    "category": "Автомобили и мотоциклы"
   },
   {
     "id": 19,
     "description": "Фантастический Стальной Компьютер",
     "price": 4430,
-    "discount": true,
+    "discount": 5,
     "popularity": 8145,
     "rating": 5,
-    "update": "Mon Apr 07 2025 17:25:54 GM",
-    "imgUrl": "image4.jpg"
+    "update": "7.04.2025",
+    "imgUrl": "image4.jpg",
+    "category": "Аэрографы и компрессоры"
   },
   {
     "id": 20,
     "description": "Великолепный Резиновый Стул",
     "price": 372,
-    "discount": true,
+    "discount": 3,
     "popularity": 9326,
     "rating": 4,
     "update": "",
-    "imgUrl": "image5.jpg"
+    "imgUrl": "image5.jpg",
+    "category": "Военная техника"
   },
   {
     "id": 21,
     "description": "Практичный Неодимовый Компьютер",
     "price": 2210,
-    "discount": false,
+    "discount": 0,
     "popularity": 9174,
     "rating": 5,
-    "update": "Sun Aug 11 2024 03:37:18 GM",
-    "imgUrl": "image1.png"
+    "update": "11.08.2024",
+    "imgUrl": "image1.png",
+    "category": "Доработка моделей"
   },
   {
     "id": 22,
     "description": "Свободный Кожанный Кепка",
     "price": 8673,
-    "discount": true,
+    "discount": 12,
     "popularity": 4937,
     "rating": 2,
-    "update": "Sun Nov 10 2024 19:33:26 GM",
-    "imgUrl": "image2.png"
+    "update": "10.11.2024",
+    "imgUrl": "image2.png",
+    "category": "Железная дорога"
   },
   {
     "id": 23,
     "description": "Великолепный Гранитный Шарф",
     "price": 7411,
-    "discount": true,
+    "discount": 10,
     "popularity": 2022,
     "rating": 1,
-    "update": "Sat Jul 26 2025 09:47:23 GM",
-    "imgUrl": "image3.png"
+    "update": "26.07.2024",
+    "imgUrl": "image3.png",
+    "category": "Инструмент"
   },
   {
     "id": 24,
     "description": "Лоснящийся Гранитный Стол",
     "price": 1152,
-    "discount": true,
+    "discount": 10,
     "popularity": 5707,
     "rating": 3,
-    "update": "Fri Oct 18 2024 11:09:13 GM",
-    "imgUrl": "image4.jpg"
+    "update": "18.10.2024",
+    "imgUrl": "image4.jpg",
+    "category": "Клей"
   },
   {
     "id": 25,
     "description": "Практичный Хлопковый Кепка",
     "price": 8401,
-    "discount": false,
+    "discount": 0,
     "popularity": 2431,
     "rating": 3,
     "update": "",
-    "imgUrl": "image5.jpg"
+    "imgUrl": "image5.jpg",
+    "category": "Краска"
   },
   {
     "id": 26,
     "description": "Интеллектуальный Хлопковый Сабо",
     "price": 9595,
-    "discount": true,
+    "discount": 5,
     "popularity": 7175,
     "rating": 3,
-    "update": "Mon Nov 25 2024 11:55:17 GM",
-    "imgUrl": "image1.png"
+    "update": "25.11.2024",
+    "imgUrl": "image1.png",
+    "category": "Литература"
   },
   {
     "id": 27,
     "description": "Фантастический Кожанный Автомобиль",
     "price": 5859,
-    "discount": false,
+    "discount": 0,
     "popularity": 1648,
     "rating": 4,
-    "update": "Wed Apr 16 2025 04:43:59 GM",
-    "imgUrl": "image2.png"
+    "update": "16.04.2025",
+    "imgUrl": "image2.png",
+    "category": "Миниатюра и диорама"
   },
   {
     "id": 28,
     "description": "Практичный Резиновый Стол",
     "price": 3089,
-    "discount": true,
+    "discount": 2,
     "popularity": 7171,
     "rating": 0,
-    "update": "Sun Apr 20 2025 04:55:23 GM",
-    "imgUrl": "image3.png"
+    "update": "20.04.2025",
+    "imgUrl": "image3.png",
+    "category": "Модели для детей"
   },
   {
     "id": 29,
     "description": "Маленький Деревянный Носки",
     "price": 4487,
-    "discount": true,
+    "discount": 7,
     "popularity": 9956,
     "rating": 5,
     "update": "",
-    "imgUrl": "image4.jpg"
+    "imgUrl": "image4.jpg",
+    "category": "Модельная химия"
   },
   {
     "id": 30,
     "description": "Великолепный Хлопковый Стол",
     "price": 1193,
-    "discount": false,
+    "discount": 0,
     "popularity": 1944,
     "rating": 0,
-    "update": "Wed Jan 15 2025 23:01:17 GM",
-    "imgUrl": "image5.jpg"
+    "update": "15.01.2025",
+    "imgUrl": "image5.jpg",
+    "category": "Печатная продукция"
   }
 ]
