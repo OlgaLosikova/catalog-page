@@ -3,41 +3,50 @@ import Card from "../Filters/components/Card/Card.vue";
 import Paginate from "../Paginate.vue";
 import FilterButton from "./components/FilterButton.vue";
 import Sort from "./components/Sort.vue";
-
-
+import ViewButtons from "./components/ViewButtons.vue";
 
 export default {
-  components: { FilterButton, Sort, Card, Paginate },
+  components: { FilterButton, Sort, Card, Paginate, ViewButtons },
+  data() {
+    return {
+      selected: "big",
+    };
+  },
+  methods: {
+    switchView(value) {
+      this.selected =value;
+    },
+  },
 };
 </script>
 
 <template>
   <div class="table">
     <div class="table-header">
-      <FilterButton v-for="item in $store.state.selectedFilters" :key="item" :text="item"/>
+      <FilterButton
+        v-for="item in $store.state.selectedFilters"
+        :key="item"
+        :text="item"
+      />
       <div class="sort-wrapper">
         <Sort />
-        <div class="buttons-wrapper">
-          <img src="../../assets/svg/view-small.svg" alt="view-small" /><img
-            src="../../assets/svg/view-big.svg"
-            alt="view-big"
-          />
-        </div>
+        <ViewButtons :selected="selected" :switchView="switchView" />
       </div>
     </div>
-    <div class="table__body">
+    <div :class="selected === 'small' ? 'table__body grid-small' : 'table__body'">
       <Card
         v-for="item in $store.state.data"
         :imgUrl="item.imgUrl"
         :description="item.description"
         :price="item.price"
+        :selected="selected"
       />
-      
-    </div><div class="table__empty">
-        <h2>Нет ни одного товара</h2>
-        <p>Попробуйте сбросить или изменить параметры фильтрации</p>
-      </div>
-      <Paginate/>
+    </div>
+    <div class="table__empty">
+      <h2>Нет ни одного товара</h2>
+      <p>Попробуйте сбросить или изменить параметры фильтрации</p>
+    </div>
+    <Paginate />
   </div>
 </template>
 
@@ -68,5 +77,10 @@ export default {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+.grid-small{
+  grid-template-columns: repeat(auto-fill, minmax(200px, 200px));
+    column-gap: 32px;
+    row-gap: 24px;
 }
 </style>

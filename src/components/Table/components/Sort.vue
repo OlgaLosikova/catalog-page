@@ -11,27 +11,27 @@ export default {
       ],
 
       direction: "",
-      intermediateType: "",
+      currentType: "",
     };
   },
   methods: {
     setSort(type) {
       if (this.direction === "") {
-        this.intermediateType = type;
+        this.currentType = type;
 
         this.direction = "desc";
         this.$store.commit("setSort", { type, direction: this.direction });
       } else if (this.direction === "desc") {
-        this.intermediateType !== type
+        this.currentType !== type
           ? (this.direction = "desc")
           : (this.direction = "asc");
-        this.intermediateType = type;
+        this.currentType = type;
         this.$store.commit("setSort", { type, direction: this.direction });
       } else {
-        this.intermediateType !== type
+        this.currentType !== type
           ? (this.direction = "asc")
           : (this.direction = "");
-        this.intermediateType = type;
+        this.currentType = type;
         this.$store.commit("setSort", { type: "id", direction: "asc" });
       }
     },
@@ -44,12 +44,17 @@ export default {
     <p class="sort__title">Сортровать по:</p>
     <button
       @click="() => setSort(category.type)"
-      class="sort__button"
+      :class="
+          (direction === 'asc' && category.type === currentType) ||
+          (direction === 'desc' && category.type === currentType)
+            ? 'sort__button active-sort'
+            : 'sort__button'
+        "
       v-for="category in categories"
     >
       {{ category.name }}
       <svg
-        v-if="direction === 'asc'"
+        v-if="direction === 'asc' && category.type === currentType"
         width="24"
         height="24"
         viewBox="0 0 24 24"
@@ -64,7 +69,8 @@ export default {
         />
       </svg>
       <svg
-        v-if="direction === 'desc'"
+        
+        v-if="direction === 'desc' && category.type === currentType"
         width="24"
         height="24"
         viewBox="0 0 24 24"
@@ -111,19 +117,24 @@ export default {
 
     &:hover {
       background-color: transparent;
-    }
-    svg {
-      margin-left: 12px;
-      &:hover {
-        background-color: transparent;
-        color: $bg-color-active;
-        &:hover svg {
-          path:last-of-type {
-            fill: $bg-color-active;
-          }
+      color: $bg-color-active;
+      &:hover svg {
+        path {
+          fill: $bg-color-active;
         }
       }
     }
+    svg {
+      margin-left: 4px;
+    }
   }
+}
+.active-sort{
+  color: $bg-color-active;
+      & svg {
+        path {
+          fill: $bg-color-active;
+        }
+      }
 }
 </style>

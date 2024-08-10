@@ -10,7 +10,6 @@ export default {
       this.$store.commit("deleteFilter", text);
       this.$store.commit("setFilters", "");
       this.$store.state.selectedCategory = "";
-
     },
   },
 };

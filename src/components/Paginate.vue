@@ -21,7 +21,7 @@ export default {
 <template>
   <paginate
     v-model="page"
-    :page-count="2"
+    :page-count="Math.ceil($store.state.data.length/20)"
     :page-range="3"
     :margin-pages="2"
     :click-handler="clickCallback"

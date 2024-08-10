@@ -10,6 +10,9 @@ export default {
     description: {
       type: String,
     },
+    selected: {
+      type: String,
+    },
   },
   data() {
     return {
@@ -27,7 +30,11 @@ export default {
       @mouseout="isMouseHover = false"
     >
       <button class="button-ghost button-ghost_small">Быстрый просмотр</button>
-      <img :src="'/src/assets/images/' + imgUrl" alt="product" />
+      <img
+        :class="selected === 'small' ? 'img-small' : ''"
+        :src="'/src/assets/images/' + imgUrl"
+        alt="product"
+      />
       <div class="card__footer">
         <p class="card__price">{{ price }} ₽</p>
         <p class="card__description">{{ description }}</p>
@@ -43,14 +50,15 @@ export default {
   background-color: $bg-color-white;
   position: relative;
   border-radius: 16px;
-  overflow: hidden;
   text-align: start;
   transition: 0.5s;
+  min-height: 100%;
 
   &:hover {
     box-shadow: 1px 1px 15px 0px #0000001a;
     position: absolute;
     z-index: 10;
+
     .button-ghost_small {
       display: flex;
     }
@@ -80,6 +88,7 @@ export default {
 
   &-wrapper {
     position: relative;
+   min-height:262px;
   }
 }
 
@@ -107,5 +116,8 @@ export default {
   &:active {
     background-color: $bg-color-selected;
   }
+}
+.img-small {
+  width: 200px;
 }
 </style>

@@ -63,16 +63,14 @@ const store = createStore({
       state.selectedFilters = [payload];
     },
     setSort(state, payload) {
-      console.log(payload);
       if (payload.direction === "desc") {
-        state.data = state.data.sort(
-          (a, b) => b[payload.type] - a[payload.type]
+        state.data = state.data.sort((a, b) =>
+          a[payload.type] < b[payload.type] ? 1 : -1
         );
       } else if (payload.direction === "asc")
-        state.data = state.data.sort(
-          (a, b) => a[payload.type] - b[payload.type]
+        state.data = state.data.sort((a, b) =>
+          a[payload.type] > b[payload.type] ? 1 : -1
         );
-        console.log(payload,state.data);
     },
   },
 });
