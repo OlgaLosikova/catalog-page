@@ -8,7 +8,9 @@
     "rating": 5,
     "update": "9.07.2025",
     "imgUrl": "image1.png",
-    "category": "Авиация"
+    "category": "Авиация",
+    "scale": "1:24",
+    "producer": "ADV"
   },
   {
     "id": 2,
@@ -19,7 +21,9 @@
     "rating": 5,
     "update": "5.02.2025",
     "imgUrl": "image2.png",
-    "category": "Автомобили и мотоциклы"
+    "category": "Автомобили и мотоциклы",
+    "scale": "1:6",
+    "producer": "Advanced Modeling"
   },
   {
     "id": 3,
@@ -30,7 +34,9 @@
     "rating": 5,
     "update": "4.08.2024",
     "imgUrl": "image3.png",
-    "category": "Аэрографы и компрессоры"
+    "category": "Аэрографы и компрессоры",
+    "scale": "1:12",
+    "producer": "Start Scale Models (SSM)"
   },
   {
     "id": 4,
@@ -41,7 +47,9 @@
     "rating": 2,
     "update": "29.11.2024",
     "imgUrl": "image4.jpg",
-    "category": "Военная техника"
+    "category": "Военная техника",
+    "scale": "1:9",
+    "producer": "Edmon Studia"
   },
   {
     "id": 5,
@@ -52,7 +60,9 @@
     "rating": 2,
     "update": "",
     "imgUrl": "image5.jpg",
-    "category": "Доработка моделей"
+    "category": "Доработка моделей",
+    "scale": "1:32",
+    "producer": "Modelcollect"
   },
   {
     "id": 6,
@@ -63,7 +73,9 @@
     "rating": 3,
     "update": "21.02.2025",
     "imgUrl": "image1.png",
-    "category": "Железная дорога"
+    "category": "Железная дорога",
+    "scale": "1:35",
+    "producer": "ModelGun"
   },
   {
     "id": 7,
@@ -74,7 +86,9 @@
     "rating": 4,
     "update": "12.07.2025",
     "imgUrl": "image2.png",
-    "category": "Инструмент"
+    "category": "Инструмент",
+    "scale": "1:43",
+    "producer": "Восточный Экспресс"
   },
   {
     "id": 8,
@@ -85,7 +99,9 @@
     "rating": 3,
     "update": "8.11.2024",
     "imgUrl": "image3.png",
-    "category": "Клей"
+    "category": "Клей",
+    "scale": "1:16",
+    "producer": "Advanced Modeling"
   },
   {
     "id": 9,
@@ -96,7 +112,9 @@
     "rating": 5,
     "update": "29.12.2024",
     "imgUrl": "image4.jpg",
-    "category": "Краска"
+    "category": "Краска",
+    "scale": "1:24",
+    "producer": "ADV"
   },
   {
     "id": 10,
@@ -107,7 +125,9 @@
     "rating": 2,
     "update": "4.08.2025",
     "imgUrl": "image5.jpg",
-    "category": "Литература"
+    "category": "Литература",
+    "scale": "1:6",
+    "producer": "Advanced Modeling"
   },
   {
     "id": 11,
@@ -118,7 +138,9 @@
     "rating": 4,
     "update": "",
     "imgUrl": "image1.png",
-    "category": "Миниатюра и диорама"
+    "category": "Миниатюра и диорама",
+    "scale": "1:12",
+    "producer": "Start Scale Models (SSM)"
   },
   {
     "id": 12,
@@ -129,7 +151,9 @@
     "rating": 5,
     "update": "",
     "imgUrl": "image2.png",
-    "category": "Модели для детей"
+    "category": "Модели для детей",
+    "scale": "1:9",
+    "producer": "Edmon Studia"
   },
   {
     "id": 13,
@@ -140,7 +164,9 @@
     "rating": 4,
     "update": "24.05.2023",
     "imgUrl": "image3.png",
-    "category": "Модельная химия"
+    "category": "Модельная химия",
+    "scale": "1:32",
+    "producer": "Modelcollect"
   },
   {
     "id": 14,
@@ -151,7 +177,9 @@
     "rating": 2,
     "update": "6.08.2025",
     "imgUrl": "image4.jpg",
-    "category": "Печатная продукция"
+    "category": "Печатная продукция",
+    "scale": "1:35",
+    "producer": "ModelGun"
   },
   {
     "id": 15,
@@ -162,7 +190,9 @@
     "rating": 4,
     "update": "16.12.2024",
     "imgUrl": "image5.jpg",
-    "category": "Флот"
+    "category": "Флот",
+    "scale": "1:43",
+    "producer": "Восточный Экспресс"
   },
   {
     "id": 16,
@@ -173,7 +203,9 @@
     "rating": 3,
     "update": "3.05.2025",
     "imgUrl": "image1.png",
-    "category": "Футляры и подставки"
+    "category": "Футляры и подставки",
+    "scale": "1:16",
+    "producer": "Advanced Modeling"
   },
   {
     "id": 17,
@@ -184,7 +216,9 @@
     "rating": 2,
     "update": "",
     "imgUrl": "image2.png",
-    "category": "Авиация"
+    "category": "Авиация",
+    "scale": "1:24",
+    "producer": "Advanced Modeling"
   },
   {
     "id": 18,
@@ -195,7 +229,9 @@
     "rating": 4,
     "update": "7.03.2025",
     "imgUrl": "image3.png",
-    "category": "Автомобили и мотоциклы"
+    "category": "Автомобили и мотоциклы",
+    "scale": "1:6",
+    "producer": "Advanced Modeling"
   },
   {
     "id": 19,
@@ -206,7 +242,9 @@
     "rating": 5,
     "update": "7.04.2025",
     "imgUrl": "image4.jpg",
-    "category": "Аэрографы и компрессоры"
+    "category": "Аэрографы и компрессоры",
+    "scale": "1:12",
+    "producer": "Advanced Modeling"
   },
   {
     "id": 20,
@@ -217,7 +255,9 @@
     "rating": 4,
     "update": "",
     "imgUrl": "image5.jpg",
-    "category": "Военная техника"
+    "category": "Военная техника",
+    "scale": "1:9",
+    "producer": "Advanced Modeling"
   },
   {
     "id": 21,
@@ -228,7 +268,9 @@
     "rating": 5,
     "update": "11.08.2024",
     "imgUrl": "image1.png",
-    "category": "Доработка моделей"
+    "category": "Доработка моделей",
+    "scale": "1:32",
+    "producer": "Advanced Modeling"
   },
   {
     "id": 22,
@@ -239,7 +281,9 @@
     "rating": 2,
     "update": "10.11.2024",
     "imgUrl": "image2.png",
-    "category": "Железная дорога"
+    "category": "Железная дорога",
+    "scale": "1:35",
+    "producer": "Advanced Modeling"
   },
   {
     "id": 23,
@@ -250,7 +294,9 @@
     "rating": 1,
     "update": "26.07.2024",
     "imgUrl": "image3.png",
-    "category": "Инструмент"
+    "category": "Инструмент",
+    "scale": "1:43",
+    "producer": "Advanced Modeling"
   },
   {
     "id": 24,
@@ -261,7 +307,9 @@
     "rating": 3,
     "update": "18.10.2024",
     "imgUrl": "image4.jpg",
-    "category": "Клей"
+    "category": "Клей",
+    "scale": "1:16",
+    "producer": "Advanced Modeling"
   },
   {
     "id": 25,
@@ -272,7 +320,9 @@
     "rating": 3,
     "update": "",
     "imgUrl": "image5.jpg",
-    "category": "Краска"
+    "category": "Краска",
+    "scale": "1:24",
+    "producer": "Advanced Modeling"
   },
   {
     "id": 26,
@@ -283,7 +333,9 @@
     "rating": 3,
     "update": "25.11.2024",
     "imgUrl": "image1.png",
-    "category": "Литература"
+    "category": "Литература",
+    "scale": "1:6",
+    "producer": "Advanced Modeling"
   },
   {
     "id": 27,
@@ -294,7 +346,9 @@
     "rating": 4,
     "update": "16.04.2025",
     "imgUrl": "image2.png",
-    "category": "Миниатюра и диорама"
+    "category": "Миниатюра и диорама",
+    "scale": "1:12",
+    "producer": "Advanced Modeling"
   },
   {
     "id": 28,
@@ -305,7 +359,9 @@
     "rating": 0,
     "update": "20.04.2025",
     "imgUrl": "image3.png",
-    "category": "Модели для детей"
+    "category": "Модели для детей",
+    "scale": "1:9",
+    "producer": "Advanced Modeling"
   },
   {
     "id": 29,
@@ -316,7 +372,9 @@
     "rating": 5,
     "update": "",
     "imgUrl": "image4.jpg",
-    "category": "Модельная химия"
+    "category": "Модельная химия",
+    "scale": "1:32",
+    "producer": "Advanced Modeling"
   },
   {
     "id": 30,
@@ -327,6 +385,8 @@
     "rating": 0,
     "update": "15.01.2025",
     "imgUrl": "image5.jpg",
-    "category": "Печатная продукция"
+    "category": "Печатная продукция",
+    "scale": "1:35",
+    "producer": "Advanced Modeling"
   }
 ]

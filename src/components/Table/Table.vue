@@ -14,7 +14,7 @@ export default {
   },
   methods: {
     switchView(value) {
-      this.selected =value;
+      this.selected = value;
     },
   },
 };
@@ -33,20 +33,19 @@ export default {
         <ViewButtons :selected="selected" :switchView="switchView" />
       </div>
     </div>
-    <div :class="selected === 'small' ? 'table__body grid-small' : 'table__body'">
+    <div
+      :class="selected === 'small' ? 'table__body grid-small' : 'table__body'"
+    >
       <Card
-        v-for="item in $store.state.data"
+        v-for="item in $store.getters.getFirstPage"
         :imgUrl="item.imgUrl"
         :description="item.description"
         :price="item.price"
         :selected="selected"
       />
     </div>
-    <div class="table__empty">
-      <h2>Нет ни одного товара</h2>
-      <p>Попробуйте сбросить или изменить параметры фильтрации</p>
-    </div>
-    <Paginate />
+
+    <Paginate v-if="$store.state.data.length / 20 >= 1" />
   </div>
 </template>
 
@@ -62,25 +61,15 @@ export default {
     row-gap: 16px;
     justify-content: center;
   }
-
-  &__empty {
-    display: none;
-    margin: 200px auto;
-    text-align: center;
-    h2 {
-      font-size: 24px;
-      font-weight: 500;
-    }
-  }
 }
 .sort-wrapper {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.grid-small{
+.grid-small {
   grid-template-columns: repeat(auto-fill, minmax(200px, 200px));
-    column-gap: 32px;
-    row-gap: 24px;
+  column-gap: 32px;
+  row-gap: 24px;
 }
 </style>

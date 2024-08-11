@@ -1,4 +1,5 @@
 <script>
+import data from "../../assets/source/data.json";
 import filters from "../../assets/source/fliters.json";
 
 import Search from "../Search.vue";
@@ -19,6 +20,7 @@ export default {
       this.$store.state.selectedCategory = item;
       this.$store.commit("addFilter", item);
       this.$store.commit("setFilters", item);
+      this.$store.commit("calculatePrice");
     },
   },
 };
@@ -26,33 +28,37 @@ export default {
 
 <template>
   <aside class="filter">
-    <div class="filter-container" v-for="filter in filters" :key="filter.title">
-      <FilterHeader :title="filter.title" />
-      <Search v-if="filter.title !== 'Категории' && filter.title !== 'Цена'" />
+    <div class="filter-container" v-for="filter in filters" :key="filter">
+      <FilterHeader :title="filter" />{{ $store.getters.getCategories }}
+      <Search v-if="filter !== 'Категории' && filter !== 'Цена'" />
       <p
         @click="() => selectCategory(item)"
-        v-if="filter.title === 'Категории'"
+        v-if="filter === 'Категории'"
         :class="
           $store.state.selectedCategory === item
             ? 'filter__item  filter__item_active'
             : 'filter__item'
         "
-        v-for="item in filter.categories"
+        v-for="item in $store.getters.getCategoiries"
         :key="item"
       >
         {{ item }}
       </p>
       <Checkbox
-        v-else-if="
-          filter.title === 'Производитель' || filter.title === 'Масштаб'
-        "
-        v-for="item in filter.categories"
-        :label="item"
+        v-else-if="filter === 'Производитель'"
+        v-for="item in $store.getters.getProducers"
+        :label="item.producer"
+        :count="item.count"
+      /><Checkbox
+        v-else-if="filter === 'Масштаб'"
+        v-for="item in $store.getters.getScale"
+        :label="item.scale"
+        :count="item.count"
       />
       <div class="slider" v-else>
         <div
           class="slider-container"
-          v-for="item in $store.state.price"
+          v-for="item in $store.getters.getPrice"
           :key="item.label"
         >
           <span class="label">{{ item.label }}</span

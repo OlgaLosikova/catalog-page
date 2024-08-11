@@ -4,6 +4,9 @@ export default {
     label: {
       type: String,
     },
+    count:{
+      type:Number,
+    }
   },
 };
 </script>
@@ -12,7 +15,7 @@ export default {
   <label class="checkbox">
     <input type="checkbox" class="checkbox__input" />
     <span class="checkbox__custom"></span>{{ label
-    }}<span class="checkbox__quantity">0</span>
+    }}<span class="checkbox__quantity">{{ count }}</span>
   </label>
 </template>
 <style lang="scss">
