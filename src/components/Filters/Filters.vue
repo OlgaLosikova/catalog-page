@@ -18,10 +18,15 @@ export default {
   methods: {
     selectCategory(item) {
       this.$store.state.selectedCategory = item;
-      this.$store.commit("addFilter", item);
-      this.$store.commit("setFilters", item);
-      this.$store.commit("calculatePrice");
+      this.$store.commit("addFilterCategory", {type:'category',title:item});
+      this.$store.commit("setFilters", {type:'category',title:item});
+      this.$store.commit("calculateFilters");
     },
+    selectCheckbox(item){
+
+      this.$store.commit("addFilterCheckbox", {type:'checkbox',title:item});
+      this.$store.commit("setFilters", {type:'checkbox',title:item});
+    }
   },
 };
 </script>
@@ -29,7 +34,7 @@ export default {
 <template>
   <aside class="filter">
     <div class="filter-container" v-for="filter in filters" :key="filter">
-      <FilterHeader :title="filter" />{{ $store.getters.getCategories }}
+      <FilterHeader :title="filter" />
       <Search v-if="filter !== 'Категории' && filter !== 'Цена'" />
       <p
         @click="() => selectCategory(item)"
@@ -49,11 +54,13 @@ export default {
         v-for="item in $store.getters.getProducers"
         :label="item.producer"
         :count="item.count"
+        :selectCheckbox="selectCheckbox"
       /><Checkbox
         v-else-if="filter === 'Масштаб'"
         v-for="item in $store.getters.getScale"
         :label="item.scale"
         :count="item.count"
+         :selectCheckbox="selectCheckbox"
       />
       <div class="slider" v-else>
         <div

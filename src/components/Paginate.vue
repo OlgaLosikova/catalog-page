@@ -8,11 +8,12 @@ export default {
   data() {
     return {
       page: 1,
+      pageCount:Math.ceil(this.$store.state.data.length/20),
     };
   },
   methods: {
-    clickCallback(pageNum) {
-      console.log(pageNum);
+    setPage(pageNum) {
+      this.$store.commit("setPage", pageNum);
     },
   },
 };
@@ -21,10 +22,10 @@ export default {
 <template>
   <paginate
     v-model="page"
-    :page-count="Math.ceil($store.state.data.length/20)"
+    :page-count="pageCount"
     :page-range="3"
     :margin-pages="2"
-    :click-handler="clickCallback"
+    :click-handler="setPage"
     :prev-text="'Предыдущая'"
     :next-text="'Следующая'"
     :container-class="'pagination'"

@@ -6,14 +6,17 @@ export default {
     },
     count:{
       type:Number,
+    },
+    selectCheckbox:{
+      type:Function,
     }
   },
 };
 </script>
 
 <template>
-  <label class="checkbox">
-    <input type="checkbox" class="checkbox__input" />
+  <label  class="checkbox">
+    <input @click="()=>selectCheckbox(label)" type="checkbox" class="checkbox__input" />
     <span class="checkbox__custom"></span>{{ label
     }}<span class="checkbox__quantity">{{ count }}</span>
   </label>

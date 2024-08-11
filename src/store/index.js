@@ -15,6 +15,9 @@ const store = createStore({
     categories: [],
     isCalculateProducers: false,
     isCalculateScale: false,
+    firstIndex: 0,
+    secondIndex: 20,
+    filtredData: [],
   },
   getters: {
     getPrice: (state) => {
@@ -36,10 +39,8 @@ const store = createStore({
       return state.price;
     },
     getFirstPage: (state) => {
-      state.slicedData = state.data.slice(
-        0,
-        state.data.length < 20 ? state.data.length : 20
-      );
+      state.data.length < 20 && (state.secondIndex = state.data.length);
+      state.slicedData = state.data.slice(state.firstIndex, state.secondIndex);
       return state.slicedData;
     },
     getCategoiries: (state) => {
@@ -85,22 +86,40 @@ const store = createStore({
   },
   mutations: {
     setFilters(state, payload) {
+      state.firstIndex = 0;
+      state.secondIndex = 20;
       state.data = data;
-      if (typeof payload === "object") {
+      if (payload.hasOwnProperty("min")) {
         state.data = state.data.filter(
           (item) => item.price >= payload.min && item.price <= payload.max
         );
-      } else if (typeof payload === "string") {
+      } else if (payload.type === "category") {
         if (payload !== "") {
-          state.data = state.data.filter((item) => item.category === payload);
+          state.data = state.data.filter(
+            (item) => item.category === payload.title
+          );
+        } else {
+          state.data = state.data.filter(
+            (item) => item.category !== payload.title
+          );
+        }
+        state.filtredData = state.data;
+      } else if (payload.type === "checkbox") {
+        console.log('xtr')
+        if (payload !== "") {
+          state.data = state.filtredData.filter(
+            (item) => item.producer === payload.title
+          );console.log(state.data)
         } else
-          state.data = state.data.filter((item) => item.category !== payload);
+          state.data = state.filtredData.filter(
+            (item) => item.producer !== payload.title
+          );
       }
     },
 
     deleteFilter(state, payload) {
       state.selectedFilters = state.selectedFilters.filter(
-        (item) => item !== payload
+        (item) => item.title !== payload
       );
     },
     resetFilter(state) {
@@ -108,8 +127,19 @@ const store = createStore({
       state.price[0].price = state.priceMin;
       state.price[1].price = state.priceMax;
     },
-    addFilter(state, payload) {
-      state.selectedFilters = [payload];
+    addFilterCategory(state, payload) {
+      if (!state.selectedFilters.find((el) => el.type === "category")) {
+        state.selectedFilters.push(payload);
+      } else
+        state.selectedFilters.find((el) => {
+          if (el.type === payload.type) {
+            el.title = payload.title;
+          }
+        });
+    },
+    addFilterCheckbox(state, payload) {
+      state.selectedFilters.push(payload);
+      console.log(state.selectedFilters);
     },
     setSort(state, payload) {
       if (payload.direction === "desc") {
@@ -121,9 +151,18 @@ const store = createStore({
           a[payload.type] > b[payload.type] ? 1 : -1
         );
     },
-    calculatePrice(state, getters) {
-      state.price=[];
-      getters.getPrice(state);
+    calculateFilters(state) {
+      state.price = [];
+      state.producers = [];
+      state.scale = [];
+      state.isCalculateProducers = false;
+      state.isCalculateScale = false;
+    },
+    setPage(state, payload) {
+      state.firstIndex = (payload - 1) * 20;
+      state.data.length >= state.firstIndex + 20
+        ? (state.secondIndex = state.firstIndex + 20)
+        : (state.secondIndex = state.data.length);
     },
   },
 });

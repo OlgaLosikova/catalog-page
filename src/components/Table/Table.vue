@@ -10,6 +10,7 @@ export default {
   data() {
     return {
       selected: "big",
+ 
     };
   },
   methods: {
@@ -23,11 +24,12 @@ export default {
 <template>
   <div class="table">
     <div class="table-header">
+      <div class="filters-wrapper">
       <FilterButton
         v-for="item in $store.state.selectedFilters"
         :key="item"
-        :text="item"
-      />
+        :text="item.title"
+      /></div>
       <div class="sort-wrapper">
         <Sort />
         <ViewButtons :selected="selected" :switchView="switchView" />
@@ -71,5 +73,10 @@ export default {
   grid-template-columns: repeat(auto-fill, minmax(200px, 200px));
   column-gap: 32px;
   row-gap: 24px;
+}
+.filters-wrapper{
+  display: flex;
+  gap:8px;
+  flex-wrap: wrap;
 }
 </style>

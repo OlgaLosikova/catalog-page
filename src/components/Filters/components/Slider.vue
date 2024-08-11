@@ -36,7 +36,7 @@ export default {
 <template>
   <div class="slider-component">
     <Slider
-      @change="(value) => setValue(value)"
+      @change="setValue"
       v-model="value"
       :tooltips="false"
     />
